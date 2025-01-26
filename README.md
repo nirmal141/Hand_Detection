@@ -1,36 +1,20 @@
-### Objective:
-## Develop an automated pipeline to track hand movements in a video by leveraging computer vision techniques and state-of-the-art tools.
+# Automatic Hand Tracking Pipeline
 
+A pipeline to detect and track hand movements in videos using **Google MediaPipe** for hand detection and **SAM (Segment Anything Model)** for segmentation and tracking.
 
-### Tools & Libraries Used:
+## Features
+- Detect hands in the first frame using MediaPipe.
+- Track hands across all frames using SAM 2.
+- Generate an output video with masked hand regions.
 
-# cv2: OpenCV for video and image processing.
-# Google MediaPipe: For detecting and localizing hand positions.
-# SAM 2 (Segment Anything Model v2): For generating masks for detected hands in video frames.
+## Installation
 
-### Key References:
+### Prerequisites
+- Python 3.8+
+- Conda (recommended)
 
-# Google MediaPipe for hand detection.
-# SAM 2 repository and Video Predictor example for segmentation tasks.
-
-### INSTALLATION STEPS:
-
-# For CPU-only systems (if no GPU):
-
-pip3 install torch torchvision torchaudio
-
-# OpenCV (for video/image processing)
-pip install opencv-python
-
-# MediaPipe (for hand detection)
-pip install mediapipe
-
-# Segment Anything Model (SAM)
-pip install git+https://github.com/facebookresearch/segment-anything.git
-
-# NumPy (for array operations)
-pip install numpy
-
-# Run the model
-
-python app.py
+### Steps
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/hand-tracking.git
+   cd hand-tracking
