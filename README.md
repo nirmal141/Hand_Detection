@@ -16,5 +16,25 @@ A pipeline to detect and track hand movements in videos using **Google MediaPipe
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/hand-tracking.git
-   cd hand-tracking
+   git clone https://github.com/nirmal141/Hand-Detection.git
+   cd Hand_Detection
+
+2. **Create Conda Environment**:
+   ```bash
+   conda create -n sam2 python=3.11
+   conda activate sam2
+
+3. **Install Dependencies**:
+   ```bash
+   # Install PyTorch (MPS support for Apple Silicon)
+   pip3 install torch torchvision torchaudio
+
+   # Install other libraries
+   pip install opencv-python mediapipe numpy
+   
+   # Install Segment Anything Model (SAM)
+   pip install git+https://github.com/facebookresearch/segment-anything.git
+
+4. **Run the Pipeline**:
+   ```bash
+   python app.py --input test.mp4 --output output.mp4
